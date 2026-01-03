@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="media/logo-diente.png" />
+    <title>DavanteDent</title>
+  </head>
+
+  <body>
+    <header class="cabecera">
+      <div class="logo">
+        <a href="index.html">
+          <img src="media/logo-diente.png" alt="logo DavanteDent" />
+        </a>
+      </div>
+
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="crear-cita.html">Crear Cita</a>
+        <a href="ver-citas.html">Ver Citas</a>
+      </nav>
+    </header>
+
+    <div class="contenedor">
+      <button onclick="redirigirNuevaCita()" id="boton-nueva-cita" class="boton-indice">Crear Cita</button>
+      <button onclick="redirigirVerCitas()" id="boton-ver-citas" class="boton-indice">Ver Citas</button>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="media/logo-diente.png" />
+    <title>DavanteDent</title>
+  </head>
+
+  <body>
+    <header class="cabecera">
+      <div class="logo">
+        <a href="index.html">
+          <img src="media/logo-diente.png" alt="logo DavanteDent" />
+        </a>
+      </div>
+
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="crear-cita.html">Crear Cita</a>
+        <a href="ver-citas.html">Ver Citas</a>
+      </nav>
+    </header>
+
+    <div class="contenedor">
+      <form action="server.php" id="formulario" class="formCrearCita">
+        <h2>🗓️ Fecha y Hora de Cita</h2>
+
+        <div class="input-row fila-fecha">
+          <div class="input-group">
+            <input
+              type="datetime-local"
+              id="fechaHora"
+              name="fechaHora"
+              required
+            />
+            <small class="error" id="error-fechaHora"></small>
+          </div>
+        </div>
+
+        <h2>👤 Datos del Cliente</h2>
+
+        <div class="input-row">
+          <div class="input-group">
+            <label for="nombre">Nombre</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Nombre"
+              required
+            />
+            <small class="error" id="error-nombre"></small>
+          </div>
+
+          <div class="input-group">
+            <label for="apellidos">Apellidos</label>
+            <input
+              type="text"
+              id="apellidos"
+              name="apellidos"
+              placeholder="Apellidos"
+              required
+            />
+            <small class="error" id="error-apellidos"></small>
+          </div>
+        </div>
+
+        <div class="input-row tres-columnas">
+          <div class="input-group">
+            <label for="dni">DNI/NIE</label>
+            <input type="text" id="dni" name="dni" required />
+            <small class="error" id="error-dni"></small>
+          </div>
+
+          <div class="input-group">
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" required />
+            <small class="error" id="error-telefono"></small>
+          </div>
+
+          <div class="input-group">
+            <label for="fechaNacimiento">Fecha de Nacimiento</label>
+            <input
+              type="date"
+              id="fechaNacimiento"
+              name="fechaNacimiento"
+              required
+            />
+            <small class="error" id="error-fechaNacimiento"></small>
+          </div>
+        </div>
+
+        <div class="input-row">
+          <div class="input-group ancho-completo">
+            <label for="observaciones">Observaciones</label>
+            <textarea
+              id="observaciones"
+              name="observaciones"
+              rows="4"
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="contenedor-boton">
+          <button id="boton-form" type="submit">Solicitar Cita</button>
+          <small class="error" id="error-boton-form"></small>
+        </div>
+      </form>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
